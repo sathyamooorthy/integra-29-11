@@ -1,0 +1,49 @@
+SAMPLE PYTHON CHECKPOINT
+
+By the end of a snippet of code, list1 and list2 will reference two separate but identical lists. What is one way to do this by using the concatenation operator? What should replace the last line in the code below?
+
+# Create a list with values.
+list1 = [1, 2, 3, 4]
+
+# Create a copy of list1.
+# What goes here?
+
+Output:
+
+list2 = []+list1
+
+DriverCode:
+import sys
+
+try:
+	x = """
+	##@TCEMBED
+	"""
+	x = x.split("\n")
+	x = [y.strip() for y in x]
+	x = [y for y in x if len(y) != 0 and y[0] != '#']
+
+	val = ""
+	if len(x) > 1:
+		print("incorrect", file=sys.stderr)
+		sys.exit(1)
+	else:
+		val = x[0]
+
+	if "list2" not in val or "list1" not in val:
+		print("list2 does not references a copy of list1.", file=sys.stderr)
+		sys.exit(1)
+	elif "+" not in val:
+		print("You have not used concatenation operator.", file=sys.stderr)
+		sys.exit(1)
+	else:
+		val = val.replace(" ", "")
+		if val=="list2=[]+list1" or val=="list2=[]+list(list1)":
+			print("correct")
+			sys.exit(0)
+		else:
+			print("incorrect", file=sys.stderr)
+			sys.exit(1)
+except Exception as e:
+	print("incorrect", file=sys.stderr)
+sys.exit(1)

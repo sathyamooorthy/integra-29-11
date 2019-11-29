@@ -1,0 +1,87 @@
+SAMPLE JAVA CHECKPOINT
+
+A video rental store keeps videos on 50 racks with 10 shelves each. Each shelf holds 25 videos. Given the declarations below, declare a three-dimensional array videoNumbers large enough to represent the store’s storage system.
+
+final int RACKS = 50;
+final int SHELVES = 10;
+final int VIDEOS = 25;
+
+
+Solutions:
+int[][][] videoNumbers = new int[RACKS][SHELVES][VIDEOS];
+
+Driver Code :
+public class ckpt_7_38
+{
+	int _a, _b, _c;
+	class __temp__{}
+	__temp__ videoNumbers = null;
+	
+	void validate(__temp__ a) {
+		System.err.println("You have not declared videoNumbers.");
+	}
+
+	void validate(int[][][] a) {
+		if(a.length == _a && a[0].length == _b && a[0][0].length == _c) {
+			for(int i=0; i<_a; ++i) {
+				for(int j=0; j<_b; ++j) {
+					for(int k=0; k<_c; ++k) {
+						if(a[i][j][k] != 0) {
+							error("You should not initialize the elements of the array.");
+						}
+					}
+				}
+			}
+			System.out.println("correct");
+			System.exit(0);
+		} else {
+			error("Use constants RACKS, SHELVES and VIDEOS in the order for declaring the array.");
+		}
+	}
+	
+	void validate(int[] a) {
+		System.err.println("videoNumbers is not a three-dimensional array.");
+		System.exit(1);
+	}
+
+	void validate(int[][] a) {
+		System.err.println("videoNumbers is not a three-dimensional array.");
+		System.exit(1);
+	}
+
+	void validate(Object[] a) {
+		System.err.println("videoNumbers is not an int array.");
+		System.exit(1);
+	}
+
+	void validate(Object a) {
+		System.err.println("videoNumbers is not an int array.");
+		System.exit(1);
+	}
+
+	static void error(String s) {
+		System.err.println(s);
+		System.exit(1);
+	}
+
+	void check(int a, int b, int c) {
+		final int RACKS = a;
+		final int SHELVES = b;
+		final int VIDEOS = c;
+		try {
+			//@TCEMBED
+			_a = a;
+			_b = b;
+			_c = c;
+			validate(videoNumbers);
+		} catch(Exception e) {
+			error("You have not initialized videoNumbers.");
+		}
+	}
+
+	public static void main(String[] args)
+	{
+		ckpt_7_38 a = new ckpt_7_38();
+		a.check(7, 8, 9);
+	}
+}

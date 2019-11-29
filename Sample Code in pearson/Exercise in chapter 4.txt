@@ -1,0 +1,18 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+ 
+ int main()
+ {
+    double x;
+ 
+    cout << "Enter a number: ";
+    cin >> x;
+ 
+    if (double a = round(x);a == 100)
+       cout << "Perfect score!" << endl;
+    else
+       cout << "Keep trying!" << endl;
+ 
+    return 0;
+}

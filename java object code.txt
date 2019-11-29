@@ -1,0 +1,94 @@
+import java.io.*;
+import java.io.InputStream;
+import java.util.Scanner;
+public class Main {
+  public static void main(String args[]) {
+      String str1,str2;
+  Scanner sc = new Scanner(System.in);
+  str1 = sc.next();
+  str2 = "Rectangle mybox1 = new Rectangle();";
+  if(str1.length()==0)
+	{
+		System.out.println("empty string");
+	}
+  else if(((str1.trim()).compareTo(str2))==0)
+	{
+		System.out.println("Given object creation is correct");
+	}
+  else
+	{
+  		System.out.println("Incorrect object creation " );
+	}	
+}
+}
+
+
+
+////////////////////////////////////////////////////////////
+
+
+
+class Rectangle
+{
+      int length;
+      int breadth;
+  void setData(int l, int b)
+      {
+        length =l;
+        breadth=b;
+      }
+    int area()
+      {
+        int rectArea;
+        rectArea = length * breadth;
+        return rectArea;
+      }
+}
+class RectangleArea
+{
+         public static void main(String[] args)
+     {
+           //@TCEMBED
+           box.setData(5,6);
+           int result = box.area();
+           System.out.println("Area of Rectangle = "+ result);
+     }
+}
+
+
+/////////////////////////////////////////////////////////////////
+
+
+
+import java.util.Scanner;
+class Rectangle
+{
+    String object()
+      {
+        Scanner input = new Scanner(System.in);
+        String str1 = input.nextLine();
+        return str1;
+      }
+}
+class RectangleArea
+{
+         public static void main(String[] args)
+     {
+         try{
+           Rectangle box = new Rectangle();
+          String str3 = box.object();
+             String str2 = "Rectangle box = new Rectangle()";
+             if(str3.compareTo(str2)==0)
+             {
+                 System.out.println("both are equal ");
+             }
+             else{
+                System.out.println("both are not equal ");     
+             }
+              
+         }
+       
+         
+        //   //@TCEMBED
+         }
+}

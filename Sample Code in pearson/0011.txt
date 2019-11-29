@@ -1,0 +1,40 @@
+The code below asks the user “Do you want to repeat the program or quit? (R/Q)”. A loop should repeat until the user has entered an R or Q (either uppercase or lowercase). Replace the second line with the appropriate while statement.
+
+
+
+again = input('Do you want to repeat ' + 'the program or quit? (R/Q) ')
+
+# What goes here?
+
+again = input('Do you want to repeat the ' + 'program or quit? (R/Q) ')
+
+Ouptput:
+
+while again.upper() != 'R' and again.upper() != 'Q':
+
+DriverCode:
+import sys
+try:
+	str_to_check1 = "while again.upper() != 'R' and again.upper() != 'Q':"
+	str_to_check2 = "while again.lower() != 'r' and again.lower() != 'q':"
+	x = """
+	##@TCEMBED
+	"""
+	x = x.split("\n")
+	x = [y.strip() for y in x]
+	x = [y for y in x if len(y) != 0 and y[0] != '#']
+	val = ""
+	if len(x) > 1:
+		print("incorrect")
+		sys.exit(1)
+	else:
+		val = x[0]
+	if val == str_to_check1 or val == str_to_check2:
+		print("correct")
+		sys.exit(0)
+	else:
+		print("incorrect")
+		sys.exit(1)
+except Exception as e:
+	print("incorrect")
+sys.exit(1)

@@ -1,0 +1,38 @@
+#include <iostream>
+#include <sstream>
+#include <algorithm>
+ #include <random>
+ using namespace std;
+
+namespace myspace{         
+         string checker(){
+              ostringstream cout;
+              cout << "randNumber = randInt(engine);";
+              return cout.str();
+         }
+}
+
+ 
+int main()
+{
+    
+    int MIN = 1;   
+    int MAX = 100;  
+    string ret_val;
+	ret_val = myspace::checker();
+    random_device engine;
+    uniform_int_distribution<int> randInt(MIN, MAX);
+    int randNumber=randInt(engine);
+    cout << randNumber<<endl;
+    string data = "randNumber = randInt(engine);";
+    if(data == ret_val)
+    {
+    cout << "Correct Answer";
+    }
+    else
+    {
+    cout << "Check your answer"<< endl;    
+    }
+    
+    return 0;
+	}

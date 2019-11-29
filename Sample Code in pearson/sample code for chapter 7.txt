@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main()
+ {
+    int numbers[] = {1, 2, 3};
+    auto [a, b, c] = numbers;
+    double average = (a+b+c) / 3.0;
+    cout<<"The value of a is :"<< a<< endl;
+    cout<<"The value of b is :"<< b<< endl;
+    cout<<"The value of c is :"<< c<< endl;
+    return 0;
+}

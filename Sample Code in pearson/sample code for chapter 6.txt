@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+void getThreeNumber(int &, int &, int &);
+int addThreeNumber(int, int, int);
+ 
+ int main()
+ {
+    int a,b,c;
+    getThreeNumber(a,b,c);
+    cout<< "sum of three nmuber is : "<<addThreeNumber(a,b,c);
+    return 0;
+}
+
+void getThreeNumber(int &a, int &b,int &c)
+{
+    cout<< "Enter the three values";
+    cin >> a>>b>>c;
+}
+ 
+int addThreeNumber(int a, int b,int c)
+{
+    return a+b+c;
+}
